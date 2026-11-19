@@ -440,6 +440,7 @@
           return;
         }
         available = true;
+        ensureAudio();
         btn.hidden = false;
         requestAnimationFrame(() => btn.classList.add('is-ready'));
       });
@@ -476,7 +477,7 @@
           if (!err || err.name !== 'NotAllowedError') onError();
         });
       }
-      fadeTo(targetVolume, 1600);
+      fadeTo(targetVolume, 400);
     }
 
     function pause() {
